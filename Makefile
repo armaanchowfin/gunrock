@@ -6,7 +6,7 @@ all: release
 
 release:
 	mkdir -p build_release
-	cd build_release && cmake -DCMAKE_BUILD_TYPE=RELEASE ..
+	cd build_release && cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_CUDA_ARCHITECTURES=86 ..
 	$(MAKE) -C ./build_release
 
 debug:
